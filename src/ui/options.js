@@ -25,7 +25,7 @@
   }
 
   function saveForm() {
-    ['title', 'channelName', 'channelId', 'videoId', 'comment'].forEach((v) => {
+    ['title', 'channelName', 'channelId', 'videoId', 'comment', 'categoryName'].forEach((v) => {
       storageData.filterData[v] = multilineToArray($(v).value);
     });
 
@@ -68,7 +68,7 @@
   }
 
   function populateForms(obj = undefined) {
-    ['title', 'channelName', 'channelId', 'videoId', 'comment'].forEach((v) => {
+    ['title', 'channelName', 'channelId', 'videoId', 'comment', 'categoryName'].forEach((v) => {
       const content = get(`filterData.${v}`, [], obj);
       $(v).value = content.join('\n');
       const len = content.length + 5;

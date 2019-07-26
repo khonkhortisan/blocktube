@@ -55,7 +55,7 @@ const utils = {
     const sendData = { filterData: {}, options: data.options };
 
     // compile regex props
-    ['title', 'channelName', 'channelId', 'videoId', 'comment'].forEach((p) => {
+    ['title', 'channelName', 'channelId', 'videoId', 'comment', 'categoryName'].forEach((p) => {
       const dataArr = this.compileRegex(data.filterData[p], p);
       if (dataArr) {
         sendData.filterData[p] = dataArr;

@@ -38,6 +38,7 @@
     'channelName',
     'title',
     'comment',
+    'categoryName',
   ];
 
   // TODO: add rules descriptions
@@ -52,6 +53,7 @@
     ],
     title: 'title.simpleText',
     vidLength: 'thumbnailOverlays.thumbnailOverlayTimeStatusRenderer.text.simpleText',
+    categoryName: 'window["ytInitialData"].contents.twoColumnWatchNextResults.results.results.contents[1].videoSecondaryInfoRenderer.metadataRowContainer.metadataRowContainerRenderer.rows[0].metadataRowRenderer.contents[0].runs[0].text',
   };
 
   const filterRules = {
@@ -104,6 +106,7 @@
         properties: {
           channelId: 'owner.videoOwnerRenderer.navigationEndpoint.browseEndpoint.browseId',
           channelName: 'owner.videoOwnerRenderer.title.runs',
+          categoryName: 'metadataRowContainer.metadataRowContainerRenderer.rows[0].metadataRowRenderer.contents[0].runs[0].text'
         },
         customFunc: redirectToNext,
       },
